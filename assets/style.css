@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink: #b76e79;
+  --ltgrey: #d8d6d8;
+  --dkblue: #392f58;
+}
+
+body {
+  font-family: "Arial Narrow", Helvetica, sans-serif;
+  border: 3px solid var(--pink);
+  /* background-color: var(--pink); */
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: var(--ltgrey);
+  text-decoration: none;
+}
+
+/* CLASSES
+.header
+  .name
+  .nav
+    .nav-items
+.me-background
+  .about-me
+  .title
+    .title-text
+    .about-me-title
+    .about-me-p
+  .projects
+    .projects-title
+    .projects-img
+      .project-1
+      .project-tbd
+  .contact-me
+    .contact-me-title
+    .contact-me-list
+ */
+
+/* HEADER */
+.header {
+  display: flex;
+  background-color: var(--pink);
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 25px;
+}
+
+.name {
+  background-color: var(--ltgrey);
+  border-radius: 20px;
+  font-size: 50px;
+  padding-left: 100px;
+  padding-right: 25px;
+  color: var(--pink);
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--ltgrey);
+  font-size: 20px;
+  /* ADD TO EACH LI ITEM- border-bottom: 10px solid var(--ltgrey); */
+}
+
+/* HERO */
+.me-background {
+  background-image: url("./images/me.JPG");
+  height: 258px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  border: 3px solid var(--pink);
+}
+
+.title {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 200px;
+  margin-left: 15px;
+  width: 90%;
+}
+
+.title-text {
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-end; */
+  font-size: 50px;
+  color: var(--pink);
+}
+
+/* BODY */
+/* ABOUT ME */
+/* .about-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 15px;
+}
+.about-me-title {
+  font-size: 50px;
+  border-right: 5px solid var(--pink);
+} */
+.about-me-p {
+  margin-left: 25px;
+  border-left: 5px solid var(--pink);
+}
+
+/* PROJECTS */
+/* .projects {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 15px;
+}
+.projects-title {
+  font-size: 50px;
+  border-right: 5px solid var(--pink);
+} */
+
+/* CONTACT ME */
+.contact-me-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* .contact-me */
