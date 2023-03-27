@@ -10,12 +10,12 @@
       name="description"
       content="Starter portfolio for a web development student"
     />
-    <link rel="stylesheet" href="./bawdy-of-work/assets/reset.css" />
-    <link rel="stylesheet" href="./bawdy-of-work/assets/style.css" />
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <!-- META END -->
 
-  <body>
+  <body class="body">
     <!-- HEADER WITH NAV START -->
     <header class="header">
       <!-- NAME -->
@@ -23,25 +23,24 @@
       <!-- NAV BAR -->
       <nav class="nav">
         <ul class="nav-items">
-          <!-- Add links down to page -->
-          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#about-me" class="nav-link">About Me</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact-me">Contact Me</a></li>
           <!-- Where do I link resume? -->
-          <li>Resume</li>
+          <li><a href="#">Resume</a></li>
         </ul>
       </nav>
     </header>
     <!-- HEADER WITH NAV END -->
 
     <!-- Hero image? -->
-    <figure class="me-background"></figure>
+    <figure class="me-background" alt="picture of author"></figure>
 
     <!-- MAIN SECTION -->
-    <main>
+    <main class="content">
       <!-- ABOUT ME START -->
-      <section class="title about-me" id="about-me">
-        <div class="title-text about-me-title">About Me</div>
+      <section class="section-whole about-me" id="about-me">
+        <div class="section-title about-me-title">About Me</div>
         <p class="about-me-p">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum
           itaque quisquam ratione soluta, quasi quae quaerat odio ex, eligendi
@@ -52,29 +51,61 @@
       <!-- ABOUT ME END -->
 
       <!-- PROJECTS START -->
-      <section class="title projects">
-        <div class="title-text projects-title" id="projects">Projects</div>
+      <section class="section-whole projects" id="projects">
+        <div class="section-title projects-title">Projects</div>
         <!-- PROJECT IMAGES START - 1st project big, 4 small -->
-        <div class="projects-img">
-          <figure class="project-1"></figure>
-          <figure class="project-tbd"></figure>
-          <figure class="project-tbd"></figure>
-          <figure class="project-tbd"></figure>
-          <figure class="project-tbd"></figure>
+          <div class="projects-grid">
+          <!-- grid -->
+          <figure class="project-1 desk-img">
+            <a href="https://slayonce.github.io/prework-study-guide/"><img src="./assets/images/desk.jpeg" alt="desk with computers" /></a>
+            <div class="text study-guide">
+              <h2>Study Guide</h2>
+              <p>HTML/CSS/JavaScript</p>
+            </div>
+          </figure>
+          <figure class="project-tbd bm1" alt="dog">
+            <img src="./assets/images/bm-face.JPG" alt="dog" />
+            <div class="text api">
+              <h2>Coming Soon!</h2>
+              <p>APIs</p>
+            </div>
+          </figure>
+          <figure class="project-tbd bm2" alt="dog">
+            <img src="./assets/images/bm-face.JPG" alt="dog" />
+            <div class="text node">
+              <h2>Coming Soon!</h2>
+              <p>Node</p>
+            </div>
+          </figure>
+          <figure class="project-tbd bm3" alt="dog">
+            <img src="./assets/images/bm-face.JPG" alt="dog" />
+            <div class="text sql">
+              <h2>Coming Soon!</h2>
+              <p>SQL</p>
+            </div>
+          </figure>
+          <figure class="project-tbd bm4" alt="dog">
+            <img src="./assets/images/bm-face.JPG" alt="dog" />
+            <div class="text mern">
+              <h2>Coming Soon!</h2>
+              <p>MERN</p>
+            </div>
+          </figure>
+        </div>
         </div>
         <!-- PROJECT IMAGES END -->
       </section>
       <!-- PROJECTS END -->
 
       <!-- CONTACT ME START -->
-      <section class="title contact-me">
-        <div class="title-text contact-me-title" id="contact-me">
-          Contact Me
-        </div>
+      <section class="section-whole contact-me" id="contact-me">
+        <div class="section-title contact-me-title">Contact Me</div>
         <ul class="contact-me-list">
-          <li>203-506-8228</li>
-          <li>katharinemg@gmail.com</li>
-          <li>GitHub</li>
+          <li><a href="tel:2035068228">203-506-8228</a></li>
+          <li>
+            <a href="mailto:katharinemg@gmail.com">katharinemg@gmail.com</a>
+          </li>
+          <li><a href="https://github.com/slayonce">GitHub</a></li>
         </ul>
       </section>
       <!-- CONTACT ME END -->

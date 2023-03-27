@@ -6,13 +6,15 @@
 
 :root {
   --pink: #b76e79;
-  --ltgrey: #d8d6d8;
+  --grey: #d0c9d0;
+  /* --grey: #d8d6d8; */
   --dkblue: #392f58;
 }
 
 body {
   font-family: "Arial Narrow", Helvetica, sans-serif;
   border: 3px solid var(--pink);
+  background-color: var(--grey);
   /* background-color: var(--pink); */
 }
 
@@ -21,30 +23,50 @@ ul {
 }
 
 a {
-  color: var(--ltgrey);
+  color: var(--grey);
   text-decoration: none;
 }
 
 /* CLASSES
-.header
-  .name
-  .nav
-    .nav-items
-.me-background
-  .about-me
-  .title
-    .title-text
-    .about-me-title
-    .about-me-p
-  .projects
-    .projects-title
-    .projects-img
-      .project-1
-      .project-tbd
-  .contact-me
-    .contact-me-title
-    .contact-me-list
+.body
+  .header
+    .name
+    .nav
+      .nav-items
+  .me-background
+  .content
+    .about-me
+    .section-whole
+      .section-title
+      .about-me-title
+      .about-me-p
+    .projects
+      .projects-title
+      .projects-img
+        .project-1
+          .desk-img
+          .text
+          .study-guide
+        .project-tbd
+          .bm1
+          .api
+          .bm2
+          .node
+          .bm3
+          .sql
+          .bm4
+          .mern
+    .contact-me
+      .contact-me-title
+      .contact-me-list
  */
+
+/* GRID */
+/* .body {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 15px;
+} */
 
 /* HEADER */
 .header {
@@ -52,11 +74,12 @@ a {
   background-color: var(--pink);
   justify-content: space-between;
   align-items: center;
-  padding: 5px 25px;
+  /* grid-column: 1/-1; */
+  padding: 5px 10px;
 }
 
 .name {
-  background-color: var(--ltgrey);
+  background-color: var(--grey);
   border-radius: 20px;
   font-size: 50px;
   padding-left: 100px;
@@ -67,10 +90,21 @@ a {
 .nav-items {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  color: var(--ltgrey);
+  gap: 0px 20px;
+  color: var(--grey);
+  background-color: var(--pink);
   font-size: 20px;
   /* ADD TO EACH LI ITEM- border-bottom: 10px solid var(--ltgrey); */
+}
+
+.nav-items a {
+  color: var(--grey);
+  border-bottom: 5px, solid, var(--grey);
+}
+
+.nav-items a:hover {
+  color: var(--dkblue);
+  border-bottom: 5px solid var(--dkblue);
 }
 
 /* HERO */
@@ -80,44 +114,64 @@ a {
   width: 100%;
   background-size: cover;
   background-position: center;
-  margin-bottom: 20px;
-  border: 3px solid var(--pink);
+  border-top: 3px solid var(--pink);
+  border-bottom: 3px solid var(--pink);
+  /* grid-column: 1/-1; */
 }
 
-.title {
+/* MAIN */
+.content {
   display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 200px;
-  margin-left: 15px;
-  width: 90%;
-}
-
-.title-text {
-  /* display: flex;
   flex-direction: column;
-  align-items: flex-end; */
-  font-size: 50px;
-  color: var(--pink);
+  justify-content: space-around;
+  align-self: stretch;
 }
 
-/* BODY */
+.section-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: var(--pink);
+  text-align: right;
+  border-right: 3px solid var(--pink);
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 100px;
+  flex: 0 0 300px;
+  align-self: stretch;
+  /* background-color: #392f58; */
+}
+
+.section-whole {
+  /* should this be a grid? */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  margin-right: 40px;
+  /* gap: 25px;
+   display: grid; */
+
+  /* background-color: wheat; */
+}
+
 /* ABOUT ME */
+/* .about-me-title {
+  grid-column: 1/2;
+  grid-row: 3/4;
+} */
+
+.about-me-p {
+  /* grid-column: 2/3;
+  grid-row: 3/4; */
+  color: var(--dkblue);
+  margin-left: 25px;
+}
 /* .about-me {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding-left: 15px;
-}
-.about-me-title {
-  font-size: 50px;
-  border-right: 5px solid var(--pink);
 } */
-.about-me-p {
-  margin-left: 25px;
-  border-left: 5px solid var(--pink);
-}
 
 /* PROJECTS */
 /* .projects {
@@ -130,11 +184,160 @@ a {
   font-size: 50px;
   border-right: 5px solid var(--pink);
 } */
+.projects-title {
+  margin-right: 25px;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 20px;
+  /* grid-template-rows: 2fr 1fr 1fr; */
+  justify-content: center;
+  /* align-items: stretch; */
+}
+.projects-grid > img {
+  width: 100%;
+  height: 100%;
+  object-fit: stretch;
+}
+
+/* .projects-img figure {
+  height: 250px;
+  width: 500px;
+  background-size: cover;
+  background-position: center; */
+/* background-attachment: fixed; */
+
+.desk-img {
+  grid-column: 1/ -1;
+  /* background: url("./images/desk.jpeg"); */
+  /* height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-position: center; */
+  /* border: 3px solid var(--dkblue); */
+}
+
+figure img {
+  border: 3px solid var(--dkblue);
+}
+
+h2 {
+  font-size: 25px;
+}
+
+.text {
+  background-color: var(--dkblue);
+  color: var(--grey);
+  display: inline-block;
+}
+
+.desk-img {
+  position: relative;
+
+  /* background-image: url("./images/desk.jpeg");
+  height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid var(--dkblue);
+  grid-column: 1/-1; */
+}
+
+.study-guide {
+  position: absolute;
+  /* how do I make these relative to the image? */
+}
+
+.bm1 {
+  grid-row: ;
+  /* background-image: url("./images/bm-face.JPG"); */
+  /* height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-position: center; */
+  /* border: 3px solid var(--dkblue); */
+  /* border-bottom: 3px solid var(--pink); */
+  position: relative;
+}
+.api {
+  position: absolute;
+}
+
+.bm2 {
+  /* background-image: url("./images/bm-face.JPG"); */
+  /* height: 258px;
+  width: 100%;
+  background-size: cover;
+  background-position: center; */
+  /* border: 3px solid var(--dkblue); */
+  position: relative;
+}
+.node {
+  position: absolute;
+}
+
+.bm3 {
+  /* background-image: url("./images/bm-face.JPG"); */
+  /* height: 258px;
+  width: 100%;
+  background-size: cover;
+  background-position: center; */
+  /* border: 3px solid var(--dkblue); */
+  position: relative;
+}
+.sql {
+  position: absolute;
+}
+
+.bm4 {
+  /* background-image: url("./images/bm-face.JPG"); */
+  /* height: 258px;
+  width: 100%;
+  background-size: cover;
+  background-position: center; */
+  /* border: 3px solid var(--dkblue); */
+  position: relative;
+}
+.mern {
+  position: absolute;
+}
 
 /* CONTACT ME */
 .contact-me-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+  width: 100%;
+  font-size: 20px;
+  margin-left: 25px;
+
+  /* background-color: aquamarine; */
 }
-/* .contact-me */
+
+.contact-me-list a {
+  color: var(--dkblue);
+  border-bottom: 5px solid var(--dkblue);
+}
+
+.contact-me-list a:hover {
+  color: var(--pink);
+  border-bottom: 5px solid var(--pink);
+}
+
+@media screen and (max-width) {
+}
+
+/* TO DO
+1) Add media queries
+2) add hover & click to anchors
+3) add opacity to pics + hover
+4) add text over my image
+*/
+
+/* QUESTIONS
+1) Grid - how to make it fit the section
+2) How to overlay the text
+3) Nav Bar - why is the border bottom not showing?
+4) Contact me - why is the color not showing? */
