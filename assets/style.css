@@ -8,13 +8,16 @@
   --pink: #b76e79;
   --grey: #d0c9d0;
   /* --grey: #d8d6d8; */
+  /* --dkblue: #000033; */
   --dkblue: #392f58;
 }
 
 body {
-  font-family: "Arial Narrow", Helvetica, sans-serif;
+  font-family: monospace, Cambria, Cochin, Georgia, Times, "Times New Roman",
+    serif;
   border: 3px solid var(--pink);
   background-color: var(--grey);
+  padding-bottom: 30px;
   /* background-color: var(--pink); */
 }
 
@@ -28,12 +31,14 @@ a {
 }
 
 /* CLASSES
+
 .body
   .header
     .name
     .nav
       .nav-items
-  .me-background
+  .hero
+    .img-me
   .content
     .about-me
     .section-whole
@@ -43,11 +48,10 @@ a {
     .projects
       .projects-title
       .projects-img
-        .project-1
+        .project
           .desk-img
           .text
           .study-guide
-        .project-tbd
           .bm1
           .api
           .bm2
@@ -75,13 +79,14 @@ a {
   justify-content: space-between;
   align-items: center;
   /* grid-column: 1/-1; */
-  padding: 5px 10px;
+  padding: 10px 10px;
 }
 
 .name {
   background-color: var(--grey);
   border-radius: 20px;
-  font-size: 50px;
+  font-size: 40px;
+  font-weight: bold;
   padding-left: 100px;
   padding-right: 25px;
   color: var(--pink);
@@ -89,8 +94,9 @@ a {
 
 .nav-items {
   display: flex;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
-  gap: 0px 20px;
+  gap: 0px 50px;
   color: var(--grey);
   background-color: var(--pink);
   font-size: 20px;
@@ -108,38 +114,35 @@ a {
 }
 
 /* HERO */
-.me-background {
-  background-image: url("./images/me.JPG");
-  height: 258px;
+.hero {
+  background-image: url("./images/parrish-freeman-unsplash.jpg");
+  height: 250px;
   width: 100%;
   background-size: cover;
   background-position: center;
   border-top: 3px solid var(--pink);
   border-bottom: 3px solid var(--pink);
+  position: relative;
+
   /* grid-column: 1/-1; */
 }
 
+.img-me {
+  border-radius: 200px;
+  position: absolute;
+  top: 5%;
+  left: 110px;
+  border: 3px solid var(--pink);
+}
+
 /* MAIN */
-.content {
+
+/* .content {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-self: stretch;
-}
-
-.section-title {
-  font-size: 50px;
-  font-weight: bold;
-  color: var(--pink);
-  text-align: right;
-  border-right: 3px solid var(--pink);
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-left: 100px;
-  flex: 0 0 300px;
-  align-self: stretch;
-  /* background-color: #392f58; */
-}
+} */
 
 .section-whole {
   /* should this be a grid? */
@@ -152,6 +155,21 @@ a {
    display: grid; */
 
   /* background-color: wheat; */
+}
+
+.section-title {
+  font-size: 35px;
+  font-weight: bold;
+  color: var(--pink);
+  text-align: right;
+  border-right: 3px solid var(--pink);
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 50px;
+  flex: 0 0 250px;
+  flex-wrap: wrap;
+  align-self: stretch;
+  /* background-color: #392f58; */
 }
 
 /* ABOUT ME */
@@ -190,9 +208,9 @@ a {
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
   grid-auto-rows: auto;
   gap: 20px;
-  /* grid-template-rows: 2fr 1fr 1fr; */
   justify-content: center;
   /* align-items: stretch; */
 }
@@ -219,12 +237,17 @@ a {
   /* border: 3px solid var(--dkblue); */
 }
 
-figure img {
+.project img {
   border: 3px solid var(--dkblue);
+  filter: blur(3px);
+}
+
+.project img:hover {
+  filter: blur(0);
 }
 
 h2 {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .text {
@@ -247,6 +270,8 @@ h2 {
 
 .study-guide {
   position: absolute;
+  left: 0;
+  top: 20%;
   /* how do I make these relative to the image? */
 }
 
@@ -263,6 +288,8 @@ h2 {
 }
 .api {
   position: absolute;
+  left: 0;
+  top: 20%;
 }
 
 .bm2 {
@@ -276,6 +303,8 @@ h2 {
 }
 .node {
   position: absolute;
+  left: 0;
+  top: 20%;
 }
 
 .bm3 {
@@ -289,6 +318,8 @@ h2 {
 }
 .sql {
   position: absolute;
+  left: 0;
+  top: 20%;
 }
 
 .bm4 {
@@ -302,6 +333,8 @@ h2 {
 }
 .mern {
   position: absolute;
+  left: 0;
+  top: 20%;
 }
 
 /* CONTACT ME */
@@ -316,9 +349,12 @@ h2 {
   /* background-color: aquamarine; */
 }
 
+.phone::before {
+}
+
 .contact-me-list a {
   color: var(--dkblue);
-  border-bottom: 5px solid var(--dkblue);
+  /* border-bottom: 5px solid var(--dkblue); */
 }
 
 .contact-me-list a:hover {
@@ -332,12 +368,15 @@ h2 {
 /* TO DO
 1) Add media queries
 2) add hover & click to anchors
-3) add opacity to pics + hover
-4) add text over my image
+3) add opacity to pics + hover ✅
+4) add pic of myself
+4) add text over hero image
+5) add empty repository linked to pics
+6) add phone icons
 */
 
 /* QUESTIONS
 1) Grid - how to make it fit the section
-2) How to overlay the text
+2) How to overlay the text ✅
 3) Nav Bar - why is the border bottom not showing?
 4) Contact me - why is the color not showing? */
