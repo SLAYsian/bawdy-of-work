@@ -7,18 +7,23 @@
 :root {
   --pink: #b76e79;
   --grey: #d0c9d0;
-  /* --grey: #d8d6d8; */
-  /* --dkblue: #000033; */
+  /* --grey: #d8d6d8; #392f58*/
   --dkblue: #392f58;
+  --ruluko: "Ruluko", sans-serif;
+  --poppins: "Poppins", sans-serif;
+  --explora: "Explora", cursive;
+  --cookie: "Cookie", cursive;
+  --bebasNeue: "Bebas Neue", cursive;
+  --badScript: "Bad Script", cursive;
+  --phuda: "Phudu", cursive;
 }
 
 body {
-  font-family: monospace, Cambria, Cochin, Georgia, Times, "Times New Roman",
-    serif;
+  font-family: "Poppins", sans-serif;
   border: 3px solid var(--pink);
   background-color: var(--grey);
   padding-bottom: 30px;
-  /* background-color: var(--pink); */
+  font-size: 20px;
 }
 
 ul {
@@ -30,77 +35,39 @@ a {
   text-decoration: none;
 }
 
-/* CLASSES
-
-.body
-  .header
-    .name
-    .nav
-      .nav-items
-  .hero
-    .img-me
-  .content
-    .about-me
-    .section-whole
-      .section-title
-      .about-me-title
-      .about-me-p
-    .projects
-      .projects-title
-      .projects-img
-        .project
-          .desk-img
-          .text
-          .study-guide
-          .bm1
-          .api
-          .bm2
-          .node
-          .bm3
-          .sql
-          .bm4
-          .mern
-    .contact-me
-      .contact-me-title
-      .contact-me-list
- */
-
-/* GRID */
-/* .body {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 15px;
-} */
-
 /* HEADER */
 .header {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   background-color: var(--pink);
   justify-content: space-between;
   align-items: center;
-  /* grid-column: 1/-1; */
   padding: 10px 10px;
 }
 
 .name {
   background-color: var(--grey);
   border-radius: 20px;
-  font-size: 40px;
+  font-size: 60px;
   font-weight: bold;
-  padding-left: 100px;
-  padding-right: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
   color: var(--pink);
+  font-family: var(--cookie);
+  }
+
+.nav {
+  display: flex;
 }
 
 .nav-items {
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: space-between;
   gap: 0px 50px;
   color: var(--grey);
   background-color: var(--pink);
-  font-size: 20px;
-  /* ADD TO EACH LI ITEM- border-bottom: 10px solid var(--ltgrey); */
+  font-size: 25px;
 }
 
 .nav-items a {
@@ -113,6 +80,10 @@ a {
   border-bottom: 5px solid var(--dkblue);
 }
 
+.resume {
+  src: url("./resume\(WIP\).pdf");
+}
+
 /* HERO */
 .hero {
   background-image: url("./images/parrish-freeman-unsplash.jpg");
@@ -123,8 +94,6 @@ a {
   border-top: 3px solid var(--pink);
   border-bottom: 3px solid var(--pink);
   position: relative;
-
-  /* grid-column: 1/-1; */
 }
 
 .img-me {
@@ -135,30 +104,31 @@ a {
   border: 3px solid var(--pink);
 }
 
+blockquote {
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  font-size: 25px;
+  background-color: #d0c9d0;
+  color: #392f58;
+  padding: 10px;
+  font-family: var(--cookie);
+  border-radius: 25px;
+  border: 3px solid var(--dkblue);
+}
+
 /* MAIN */
 
-/* .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-self: stretch;
-} */
-
 .section-whole {
-  /* should this be a grid? */
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 30px;
   margin-right: 40px;
-  /* gap: 25px;
-   display: grid; */
-
-  /* background-color: wheat; */
 }
 
 .section-title {
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bold;
   color: var(--pink);
   text-align: right;
@@ -169,172 +139,66 @@ a {
   flex: 0 0 250px;
   flex-wrap: wrap;
   align-self: stretch;
-  /* background-color: #392f58; */
+  font-family: var(--phuda);
 }
 
-/* ABOUT ME */
-/* .about-me-title {
-  grid-column: 1/2;
-  grid-row: 3/4;
-} */
-
 .about-me-p {
-  /* grid-column: 2/3;
-  grid-row: 3/4; */
   color: var(--dkblue);
   margin-left: 25px;
 }
-/* .about-me {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-left: 15px;
-} */
 
 /* PROJECTS */
-/* .projects {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-left: 15px;
-}
-.projects-title {
-  font-size: 50px;
-  border-right: 5px solid var(--pink);
-} */
-.projects-title {
-  margin-right: 25px;
-}
+
 .projects-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2fr 1fr 1fr;
-  grid-auto-rows: auto;
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  /* align-items: stretch; */
-}
-.projects-grid > img {
-  width: 100%;
-  height: 100%;
-  object-fit: stretch;
 }
 
-/* .projects-img figure {
-  height: 250px;
-  width: 500px;
-  background-size: cover;
-  background-position: center; */
-/* background-attachment: fixed; */
+.project {
+  min-height: 200px;
+  max-height: 200px;
+  flex-basis: 48%;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 20px 0;
+  margin: 0.5em;
+  border: 3px solid var(--dkblue);
+}
+
+.project:first-child {
+  min-height: 400px;
+  flex-basis: 98%;
+}
 
 .desk-img {
-  grid-column: 1/ -1;
-  /* background: url("./images/desk.jpeg"); */
-  /* height: 400px;
-  width: 100%;
-  background-size: cover;
-  background-position: center; */
-  /* border: 3px solid var(--dkblue); */
-}
-
-.project img {
-  border: 3px solid var(--dkblue);
-  filter: blur(3px);
-}
-
-.project img:hover {
-  filter: blur(0);
-}
-
-h2 {
-  font-size: 20px;
+  background-image: url("./images/desk.jpeg");
+  background-position: center;
 }
 
 .text {
   background-color: var(--dkblue);
   color: var(--grey);
-  display: inline-block;
 }
 
-.desk-img {
-  position: relative;
-
-  /* background-image: url("./images/desk.jpeg");
-  height: 400px;
-  width: 100%;
-  background-size: cover;
+.bm {
+  background-image: url(./images/bm-face.JPG);
   background-position: center;
-  border: 3px solid var(--dkblue);
-  grid-column: 1/-1; */
 }
 
-.study-guide {
-  position: absolute;
-  left: 0;
-  top: 20%;
-  /* how do I make these relative to the image? */
+.projects-grid a:hover {
+  transform: scale(1.01);
+  filter: blur(2px);
 }
 
-.bm1 {
-  grid-row: ;
-  /* background-image: url("./images/bm-face.JPG"); */
-  /* height: 200px;
-  width: 100%;
-  background-size: cover;
-  background-position: center; */
-  /* border: 3px solid var(--dkblue); */
-  /* border-bottom: 3px solid var(--pink); */
-  position: relative;
-}
-.api {
-  position: absolute;
-  left: 0;
-  top: 20%;
+h3 {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: var(--ruluko);
 }
 
-.bm2 {
-  /* background-image: url("./images/bm-face.JPG"); */
-  /* height: 258px;
-  width: 100%;
-  background-size: cover;
-  background-position: center; */
-  /* border: 3px solid var(--dkblue); */
-  position: relative;
-}
-.node {
-  position: absolute;
-  left: 0;
-  top: 20%;
-}
-
-.bm3 {
-  /* background-image: url("./images/bm-face.JPG"); */
-  /* height: 258px;
-  width: 100%;
-  background-size: cover;
-  background-position: center; */
-  /* border: 3px solid var(--dkblue); */
-  position: relative;
-}
-.sql {
-  position: absolute;
-  left: 0;
-  top: 20%;
-}
-
-.bm4 {
-  /* background-image: url("./images/bm-face.JPG"); */
-  /* height: 258px;
-  width: 100%;
-  background-size: cover;
-  background-position: center; */
-  /* border: 3px solid var(--dkblue); */
-  position: relative;
-}
-.mern {
-  position: absolute;
-  left: 0;
-  top: 20%;
+span {
+  font-family: var(--phuda);
 }
 
 /* CONTACT ME */
@@ -345,38 +209,66 @@ h2 {
   width: 100%;
   font-size: 20px;
   margin-left: 25px;
-
-  /* background-color: aquamarine; */
-}
-
-.phone::before {
 }
 
 .contact-me-list a {
   color: var(--dkblue);
-  /* border-bottom: 5px solid var(--dkblue); */
+  border-bottom: 3px solid var(--dkblue);
 }
 
 .contact-me-list a:hover {
   color: var(--pink);
-  border-bottom: 5px solid var(--pink);
+  border-bottom: 3px solid var(--pink);
 }
 
-@media screen and (max-width) {
+@media screen and (min-width: 1350px) {
+  .projects-grid {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .project {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0 0 10px 0;
+    justify-content: center;
+    text-align: center;
+  }
+  header h1 {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  header nav {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .section-whole {
+    flex-direction: column;
+  }
+  .section-title {
+    align-self: center;
+    border-bottom: 10px solid var(--pink);
+    border-right: none;
+    padding: 0;
+    flex-basis: auto;
+    margin-bottom: 20px;
+  }
 }
 
 /* TO DO
-1) Add media queries
-2) add hover & click to anchors
+1) Add media queries ✅
+2) add hover & click to anchors ✅
 3) add opacity to pics + hover ✅
-4) add pic of myself
-4) add text over hero image
-5) add empty repository linked to pics
-6) add phone icons
-*/
-
-/* QUESTIONS
-1) Grid - how to make it fit the section
-2) How to overlay the text ✅
-3) Nav Bar - why is the border bottom not showing?
-4) Contact me - why is the color not showing? */
+4) add pic of myself ✅
+4) add text over hero image ✅
+5) add empty repository linked to pics ✅
+6) add phone icons 
+7) add about me paragraph ✅
+8) Add alt to images ✅

@@ -10,6 +10,9 @@
       name="description"
       content="Starter portfolio for a web development student"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Bebas+Neue&family=Cookie&family=Explora&family=Phudu:wght@300&family=Poppins:wght@100&family=Ruluko&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/reset.css" />
     <link rel="stylesheet" href="./assets/style.css" /> 
   </head>
@@ -23,76 +26,67 @@
       <!-- NAV BAR -->
       <nav class="nav">
         <ul class="nav-items">
-          <li><a href="#about-me" class="nav-link">About Me</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact-me">Contact Me</a></li>
-          <!-- Where do I link resume? -->
-          <!-- <li><a href="#">Resume</a></li> -->
+          <li><a href="#about-me" class="nav-link">about me</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#contact-me">contact me</a></li>
+          <li><a href="./assets/resume(WIP).pdf">resume</a></li>
         </ul>
       </nav>
     </header>
-    <!-- HEADER WITH NAV END -->
 
-    <!-- Hero image? -->
-    <figure class="hero" alt="nyc background pic">
+    <!-- HERO -->
+    <figure class="hero" alt="graphic background">
       <img src="./assets/images/me-small3.JPG" alt="image of author" class="img-me"></img>
+      <blockquote>"I'm on that new vibration, I'm building my own foundation" <br>- Beyoncé Giselle Knowles-Carter</blockquote>
     </figure>
 
     <!-- MAIN SECTION -->
     <main class="content">
       <!-- ABOUT ME START -->
       <section class="section-whole about-me" id="about-me">
-        <div class="section-title about-me-title">About Me</div>
+        <div class="section-title about-me-title">about me</div>
         <p class="about-me-p">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum
-          itaque quisquam ratione soluta, quasi quae quaerat odio ex, eligendi
-          ab nobis tenetur, amet dolorum eius deleniti dolorem maiores.
-          Voluptatibus, quibusdam?
+          A little bit about me. I currently reside in Connecticut, just outside of NYC, although I feel as though I'm a California girl at heart. I have a dog named Batman, who makes a cameo (or four) on this page.
+          <br><br>
+          My passion lies in the world of fashion, which is something I have built my career around. About 8 years ago, I started working for a small conversational commerce start-up, where I had the opportunity to work closely with the app developers. I was fascinated by the process of being able to suggest features and watch them come to life. I now work for a much larger fashion tech company where we have a development team dedicated to my department. I look forward to transitioning from fashion tech user to developer. I can't wait to fill my page with projects I have created!
         </p>
       </section>
       <!-- ABOUT ME END -->
 
       <!-- PROJECTS START -->
       <section class="section-whole projects" id="projects">
-        <div class="section-title projects-title">Projects</div>
-        <!-- PROJECT IMAGES START - 1st project big, 4 small -->
+        <div class="section-title projects-title">projects</div>
           <div class="projects-grid">
-          <!-- grid -->
-          <figure class="project desk-img">
-            <a href="https://slayonce.github.io/prework-study-guide/"><img src="./assets/images/desk.jpeg" alt="desk with computers" /></a>
-            <div class="text study-guide">
-              <h2>Study Guide</h2>
-              <p>HTML/CSS/JavaScript</p>
-            </div>
-          </figure>
-          <figure class="project bm1" alt="dog">
-            <img src="./assets/images/bm-face.JPG" alt="dog" />
-            <div class="text api">
-              <h2>Coming Soon!</h2>
-              <p>APIs</p>
-            </div>
-          </figure>
-          <figure class="project bm2" alt="dog">
-            <img src="./assets/images/bm-face.JPG" alt="dog" />
-            <div class="text node">
-              <h2>Coming Soon!</h2>
-              <p>Node</p>
-            </div>
-          </figure>
-          <figure class="project bm3" alt="dog">
-            <img src="./assets/images/bm-face.JPG" alt="dog" />
+            <a href="https://slayonce.github.io/prework-study-guide/" class="project desk-img" alt="desk with computers">
+              <div class="text study-guide">
+                <h3>Study Guide</h3>
+                <span>HTML/CSS/JavaScript</span>
+              </div>
+            </a>
+            <a href="https://slayonce.github.io/placeholder/" class="project bm" alt="black pomeranian dog">
+              <div class="text api">
+                <h3 class="reveal">Coming Soon!</h3>
+                <span class="reveal">APIs</span>
+              </div>
+            </a>
+            <a href="https://slayonce.github.io/placeholder/" class="project bm" alt="black pomeranian dog">
+              <div class="text node">
+                <h3>Coming Soon!</h3>
+                <span>Node</span>
+              </div>
+            </a>
+          <a href="https://slayonce.github.io/placeholder/" class="project bm" alt="black pomeranian dog">
             <div class="text sql">
-              <h2>Coming Soon!</h2>
-              <p>SQL</p>
+              <h3>Coming Soon!</h3>
+              <span>SQL</span>
             </div>
-          </figure>
-          <figure class="project bm4" alt="dog">
-            <img src="./assets/images/bm-face.JPG" alt="dog" />
+          </a>
+          <a href="https://slayonce.github.io/placeholder/" class="project bm" alt="black pomeranian dog">
             <div class="text mern">
-              <h2>Coming Soon!</h2>
-              <p>MERN</p>
+              <h3>Coming Soon!</h3>
+              <span>MERN</span>
             </div>
-          </figure>
+          </a>
         </div>
         </div>
         <!-- PROJECT IMAGES END -->
@@ -101,7 +95,7 @@
 
       <!-- CONTACT ME START -->
       <section class="section-whole contact-me" id="contact-me">
-        <div class="section-title contact-me-title">Contact Me</div>
+        <div class="section-title contact-me-title">contact me</div>
         <ul class="contact-me-list">
           <li class="phone"><a href="tel:2035068228">203-506-8228</a></li>
           <li>
