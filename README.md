@@ -20,7 +20,12 @@ As a future developer, I want a place to show my completed work. I would also li
 
 ### Screenshots:
 
-![Screenshot_1]()
+![./assets/images/webpage1.png]
+![./assets/images/webpage2.png]
+![./assets/images/responsive-980.png]
+![./assets/images/responsive-980-2.png]
+![./assets/images/responsive-768.png]
+![./assets/images/responsive-768-2.png]
 
 ### References
 
