@@ -6,16 +6,17 @@
 
 :root {
   --pink: #b76e79;
-  --grey: #d0c9d0;
+  --grey: #DCD2DC;
+  /* --grey: #d0c9d0; */
   /* --grey: #d8d6d8; #392f58*/
   --dkblue: #392f58;
   --ruluko: "Ruluko", sans-serif;
-  --poppins: "Poppins", sans-serif;
+  --poppins: "Poppins", Verdana, sans-serif;
   --explora: "Explora", cursive;
-  --cookie: "Cookie", cursive;
+  --cookie: "Cookie", Georgia, cursive;
   --bebasNeue: "Bebas Neue", cursive;
   --badScript: "Bad Script", cursive;
-  --phuda: "Phudu", cursive;
+  --phuda: "Phudu", Impact, cursive;
 }
 
 body {
@@ -23,7 +24,6 @@ body {
   border: 3px solid var(--pink);
   background-color: var(--grey);
   padding-bottom: 30px;
-  font-size: 20px;
 }
 
 ul {
@@ -128,7 +128,7 @@ blockquote {
 }
 
 .section-title {
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bold;
   color: var(--pink);
   text-align: right;
@@ -136,7 +136,7 @@ blockquote {
   padding-top: 10px;
   padding-right: 10px;
   padding-left: 50px;
-  flex: 0 0 250px;
+  flex: 0 0 225px;
   flex-wrap: wrap;
   align-self: stretch;
   font-family: var(--phuda);
@@ -206,6 +206,7 @@ span {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   font-size: 20px;
   margin-left: 25px;
@@ -221,7 +222,7 @@ span {
   border-bottom: 3px solid var(--pink);
 }
 
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 1100px) {
   .projects-grid {
     flex-grow: 1;
   }
@@ -231,6 +232,10 @@ span {
   .project {
     flex-basis: 100%;
   }
+.contact-me-list li {
+    margin-bottom: 15px;
+  } 
+
 }
 
 @media screen and (max-width: 768px) {
@@ -251,6 +256,7 @@ span {
 
   .section-whole {
     flex-direction: column;
+    margin-right: 0;
   }
   .section-title {
     align-self: center;
