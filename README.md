@@ -16,7 +16,7 @@ As a future developer, I want a place to show my completed work. I would also li
 - Click each image to deploy the project webpage (placeholder for Coming Soon! projects)
 - Click the "Contact Me" links to contact me or take you to my GitHub or LinkedIn pages
 
-[Live]()
+[Live](https://slayonce.github.io/bawdy-of-work/)
 
 ### Screenshots:
 
