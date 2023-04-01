@@ -20,12 +20,12 @@ As a future developer, I want a place to show my completed work. I would also li
 
 ### Screenshots:
 
-![./assets/images/webpage1.png]
-![./assets/images/webpage2.png]
-![./assets/images/responsive-980.png]
-![./assets/images/responsive-980-2.png]
-![./assets/images/responsive-768.png]
-![./assets/images/responsive-768-2.png]
+![webpage1](https://user-images.githubusercontent.com/127693250/229259359-c99ad76e-2677-49cd-b8d7-d7cf30601a70.png)
+![webpage2](https://user-images.githubusercontent.com/127693250/229259366-d9e57f88-6706-4075-bc59-b737a8aab9e6.png)
+![responsive-980](https://user-images.githubusercontent.com/127693250/229259368-5c69548d-680b-4dd1-aca2-f37a3b2294f8.png)
+![responsive-980-2](https://user-images.githubusercontent.com/127693250/229259370-24bb312b-58de-4d72-8e29-b56fa55ec8f6.png)
+![responsive-768](https://user-images.githubusercontent.com/127693250/229259374-57cbd5de-3591-4500-aa6d-7a232b610f74.png)
+![responsive-768-2](https://user-images.githubusercontent.com/127693250/229259398-ade70782-8a51-4c33-a999-30c11651be1a.png)
 
 ### References
 
