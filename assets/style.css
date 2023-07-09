@@ -171,6 +171,13 @@ blockquote {
   flex-basis: 98%;
 }
 
+.ready-slayer-one {
+  background: url("./images/ready-slayer-one.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
 .desk-img {
   background-image: url("./images/desk.jpeg");
   background-position: center;
